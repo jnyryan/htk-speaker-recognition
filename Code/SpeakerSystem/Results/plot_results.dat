@@ -1,0 +1,46 @@
+clf
+hold
+grid on
+
+#plot(john, normpdf(john, mean(john), std(john)), ";john;0")
+#plot(john2, normpdf(john2, mean(john2), std(john2)), ";john2;0")
+#plot(rcollins, normpdf(rcollins, mean(rcollins), std(rcollins)), ";robert;1")
+#plot(karl, normpdf(karl, mean(karl), std(karl)), ";karl;2")
+#plot(moc, normpdf(moc, mean(moc), std(moc)), ";moc;3")
+#plot(nrooney, normpdf(nrooney, mean(nrooney), std(nrooney)), ";niall;4")
+#plot(sarahjane, normpdf(sarahjane, mean(sarahjane), std(sarahjane)), ";sarahjane;5")
+#plot(sarahjane_robert, normpdf(sarahjane_robert, mean(sarahjane_robert), std(sarahjane_robert)), ";sarahjanerobert;0")
+#plot(sarahjane_robert_naill, normpdf(sarahjane_robert_naill, mean(sarahjane_robert_naill), std(sarahjane_robert_naill)), ";sarahjanerobertnaill;3")
+#plot(imposter, normpdf(imposter, mean(imposter), std(imposter)), ";All Imposters;3o")
+
+figure(1)
+clf
+hold
+grid on
+#legend("Speaker against 3 person imposter sample set")
+plot(john10, normpdf(john10, mean(john10), std(john10)), ";john10;1")
+plot(sarahjane_robert_naill, normpdf(sarahjane_robert_naill, mean(sarahjane_robert_naill), std(sarahjane_robert_naill)), ";sarahjanerobertnaill;3")
+print('plotSpeakerVs3Samples.png')
+
+figure(2)
+clf
+hold
+grid on
+#legend("Speaker against 5 person imposter sample set")
+plot(john10, normpdf(john10, mean(john10), std(john10)), ";john10;1")
+plot(imposter, normpdf(imposter, mean(imposter), std(imposter)), ";All Imposters;3")
+print('plotSpeakerVs5Samples.png');
+
+figure(3)
+clf
+hold
+grid on
+#legend("All Samples in Set")
+plot(john10, normpdf(john10, mean(john10), std(john10)), ";john10;0")
+plot(rcollins, normpdf(rcollins, mean(rcollins), std(rcollins)), ";robert;1")
+plot(karl, normpdf(karl, mean(karl), std(karl)), ";karl;2")
+plot(moc, normpdf(moc, mean(moc), std(moc)), ";moc;3")
+plot(nrooney, normpdf(nrooney, mean(nrooney), std(nrooney)), ";niall;4")
+plot(sarahjane, normpdf(sarahjane, mean(sarahjane), std(sarahjane)), ";sarahjane;5")
+print('plotAllSamples.png');
+
